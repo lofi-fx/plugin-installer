@@ -6,6 +6,14 @@
 ./install.sh
 ```
 
+To download and run the latest installer directly from Terminal:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/lofi-fx/plugin-installer/main/install.sh | bash
+```
+
+Quit DaVinci Resolve first. The installer will request an administrator password for the system-wide install.
+
 The script uses only tools included with modern macOS: Bash, `curl`, `unzip`, `shasum`, `ditto`, `xattr`, and `sudo`. It downloads and verifies all five release archives before changing the install directory, removes the `com.apple.quarantine` attribute from each bundle, and resets Resolve's cached OFX plugin list. Quit DaVinci Resolve before running it and launch Resolve again afterward.
 
 The default system install may prompt for an administrator password. To install in the current user's Library instead:

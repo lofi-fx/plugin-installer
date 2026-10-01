@@ -32,7 +32,15 @@ die() {
 }
 
 usage() {
-    sed -n '2,18p' "$0"
+    cat <<'EOF'
+LoFi FX OFX plugin installer for macOS
+
+Usage:
+  ./install.sh                 Install system-wide (recommended)
+  ./install.sh --user          Install for the current user
+  ./install.sh --dry-run       Download and verify, but do not install
+  ./install.sh --help
+EOF
 }
 
 cleanup() {
